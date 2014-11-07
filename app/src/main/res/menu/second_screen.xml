@@ -4,9 +4,9 @@
       tools:context=".MainActivity">
 
     <item
-        android:id="@+id/action_list"
-        android:title="@string/action_list"
+        android:id="@+id/action_home"
+        android:title="@string/action_home"
         android:orderInCategory="100"
-        android:icon="@drawable/ic_action_action_description"
+        android:icon="@drawable/ic_content_reply_all"
         app:showAsAction="always"/>
 </menu>

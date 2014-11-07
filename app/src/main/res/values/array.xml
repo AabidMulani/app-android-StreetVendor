@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="president_array">
+        <item>State President</item>
+        <item>Dist. President</item>
+        <item>City President</item>
+        <item>Area President</item>
+        <item>State General Secretary</item>
+        <item>Dist. General Secretary</item>
+        <item>City General Secretary</item>
+        <item>Area General Secretary</item>
+        <item>State Treasurer</item>
+        <item>Dist. Treasurer</item>
+        <item>City Treasurer</item>
+        <item>Area Treasurer</item>
+        <item>WCM</item>
+        <item>TVC MEMBER</item>
+        <item>Hawkers</item>
+    </array>
+
+    <array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+    </array>
+
+    <array name="state_array">
+        <item>Jharkand</item>
+    </array>
+
+    <array name="district_array">
+        <item>Rachi</item>
+    </array>
+
+    <array name="city_array">
+        <item>Rachi</item>
+    </array>
+
+    <array name="business_type_array">
+        <item>Tea Stall</item>
+        <item>Veg. Shop</item>
+        <item>Fruit Shop</item>
+        <item>Cloth Shop</item>
+        <item>Food Shop</item>
+        <item>Juice</item>
+    </array>
+
+    <array name="marital_status_array">
+        <item>Unmarried</item>
+        <item>Married</item>
+        <item>Widow</item>
+        <item>Divorced</item>
+    </array>
+
+    <array name="caste_array">
+        <item>SC/ST</item>
+        <item>OBC</item>
+        <item>General</item>
+    </array>
+
+    <array name="qualification_array">
+        <item>Illiterate</item>
+        <item>Primary Education</item>
+        <item>Non - Matric</item>
+        <item>Matric</item>
+        <item>Inter</item>
+        <item>Graduate</item>
+        <item>Others</item>
+    </array>
+
+
+    <array name="id_proof_array">
+        <item>Voter ID</item>
+        <item>AADHAR Card</item>
+        <item>Pan Card</item>
+        <item>Driving License</item>
+        <item>Others</item>
+    </array>
+
+</resources>

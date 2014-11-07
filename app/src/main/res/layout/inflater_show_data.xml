@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:padding="3dp"
+        android:textColor="@color/light_blue"
+        android:id="@+id/textView_name"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:padding="3dp"
+        android:textColor="@color/light_blue"
+        android:id="@+id/textView_father"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:padding="3dp"
+        android:textColor="@color/light_blue"
+        android:id="@+id/textView_address"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:padding="3dp"
+        android:textColor="@color/light_blue"
+        android:id="@+id/textView_mobile"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:padding="3dp"
+        android:textColor="@color/light_blue"
+        android:id="@+id/textView_age"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:padding="3dp"
+        android:gravity="right"
+        android:textColor="@color/light_blue"
+        android:id="@+id/textView_gender"/>
+
+</LinearLayout>
