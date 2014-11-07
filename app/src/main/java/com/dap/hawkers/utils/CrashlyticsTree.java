@@ -1,6 +1,8 @@
 package com.dap.hawkers.utils;
 
 
+import com.crashlytics.android.Crashlytics;
+
 import timber.log.Timber;
 
 /**
@@ -48,14 +50,14 @@ public class CrashlyticsTree extends Timber.HollowTree {
     @Override
     public void e(Throwable t, String message, Object... args) {
         logMessage("ERROR: " + message, args);
-//        Crashlytics.logException(t);
+        Crashlytics.logException(t);
     }
 
     private void logMessage(String message, Object... args) {
         try {
-//            Crashlytics.log(String.format(message, args));
+            Crashlytics.log(String.format(message, args));
         } catch (Exception e) {
-        //don't handle
+            //don't handle
         }
     }
 }

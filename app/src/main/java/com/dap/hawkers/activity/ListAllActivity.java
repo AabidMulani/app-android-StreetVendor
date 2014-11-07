@@ -13,7 +13,6 @@ import android.widget.TextView;
 import com.dap.hawkers.BaseActivity;
 import com.dap.hawkers.R;
 import com.dap.hawkers.database.InformationTable;
-import com.dap.hawkers.utils.Utils;
 
 import java.util.List;
 

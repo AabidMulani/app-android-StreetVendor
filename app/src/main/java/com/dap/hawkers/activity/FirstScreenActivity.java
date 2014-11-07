@@ -40,7 +40,6 @@ public class FirstScreenActivity extends BaseActivity {
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color
                 .theme_main_color)));
         Utils.hideKeyboard(activity);
-
     }
 
 
