@@ -39,10 +39,11 @@
 
 
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
                 android:id="@+id/imageView_profile"
                 android:scaleType="fitXY"
+                android:layout_margin="10dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/ic_action_add"/>
 

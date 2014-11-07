@@ -6,8 +6,11 @@ import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
 import android.net.ConnectivityManager;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
@@ -17,6 +20,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dap.hawkers.R;
+
+import java.io.ByteArrayOutputStream;
 
 import timber.log.Timber;
 
@@ -169,6 +174,18 @@ public class Utils {
         } catch (NullPointerException ex) {
             Timber.e("setAlertDialogTheme", Log.getStackTraceString(ex));
         }
+    }
+
+    public static String convertImageToBase64(Bitmap img) {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        img.compress(Bitmap.CompressFormat.JPEG, 90, baos);
+        byte[] byteArrayImage = baos.toByteArray();
+        return Base64.encodeToString(byteArrayImage, Base64.DEFAULT);
+    }
+
+    public static Bitmap convertBase64ToImage(String base64) {
+        byte[] byteArray = Base64.decode(base64, Base64.DEFAULT);
+        return BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
     }
 
 }
