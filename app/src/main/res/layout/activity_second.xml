@@ -11,6 +11,7 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/save_button"
         android:background="@color/white"
+        android:id="@+id/scroll_view"
         android:paddingTop="15dp"
         android:overScrollMode="never"
         android:clipToPadding="false"
@@ -71,7 +72,7 @@
                 android:id="@+id/editText_name"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:inputType="textPersonName"
+                android:inputType="textPersonName|textCapWords"
                 android:textSize="@dimen/theme_editext_size"
                 android:textColor="@color/edittext_color"/>
 
@@ -104,7 +105,7 @@
                 android:id="@+id/editText_father"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:inputType="textPersonName"
+                android:inputType="textPersonName|textCapWords"
                 android:textSize="@dimen/theme_editext_size"
                 android:textColor="@color/edittext_color"/>
 
@@ -137,7 +138,7 @@
                 android:id="@+id/editText_permanent_addr"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:inputType="textMultiLine"
+                android:inputType="textMultiLine|textCapSentences"
                 android:minLines="2"
                 android:maxLines="4"
                 android:textSize="@dimen/theme_editext_size"
@@ -172,7 +173,7 @@
                 android:id="@+id/editText_present_addr"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:inputType="textMultiLine"
+                android:inputType="textMultiLine|textCapSentences"
                 android:minLines="2"
                 android:maxLines="4"
                 android:textSize="@dimen/theme_editext_size"
@@ -428,7 +429,7 @@
                 android:id="@+id/editText_religion"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:inputType="number"
+                android:inputType="text"
                 android:textSize="@dimen/theme_editext_size"
                 android:textColor="@color/edittext_color"/>
 
@@ -641,7 +642,7 @@
                 android:id="@+id/editText_business"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:inputType="number"
+                android:inputType="text|textCapWords"
                 android:textSize="@dimen/theme_editext_size"
                 android:textColor="@color/edittext_color"/>
 
@@ -705,7 +706,7 @@
                 android:id="@+id/editText_duration"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:inputType="number"
+                android:inputType="text"
                 android:textSize="@dimen/theme_editext_size"
                 android:textColor="@color/edittext_color"/>
 
@@ -738,7 +739,7 @@
                 android:id="@+id/editText_avg_daily_income"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:inputType="number"
+                android:inputType="text"
                 android:textSize="@dimen/theme_editext_size"
                 android:textColor="@color/edittext_color"/>
 

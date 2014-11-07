@@ -13,12 +13,17 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 
 import com.dap.hawkers.BaseActivity;
 import com.dap.hawkers.R;
+import com.dap.hawkers.database.InformationTable;
 import com.dap.hawkers.utils.Utils;
 
 import java.io.File;
@@ -36,9 +41,18 @@ import timber.log.Timber;
  * Created by AABID on 07-11-2014.
  */
 public class SecondScreenActivity extends BaseActivity {
+    public static String EXTRA_OPTION = "option";
+    public static String EXTRA_STATE = "state";
+    public static String EXTRA_DISTRICT = "district";
+    public static String EXTRA_CITY = "city";
+    public static String EXTRA_AREA = "area";
 
     private static final int REQUEST_CAMERA = 996;
     private static final int SELECT_FILE = 999;
+
+    @InjectView(R.id.scroll_view)
+    ScrollView scroll_view;
+
     @InjectView(R.id.editText_name)
     EditText nameEditText;
     @InjectView(R.id.editText_father)
@@ -66,6 +80,31 @@ public class SecondScreenActivity extends BaseActivity {
     @InjectView(R.id.editText_avg_daily_income)
     EditText avgDailyIncomeEditText;
 
+    @InjectView(R.id.checkBox_bpl_card)
+    CheckBox bplCardCheckBox;
+    @InjectView(R.id.checkBox_food_security)
+    CheckBox foodSecurityCheckBox;
+    @InjectView(R.id.checkBox_health_card)
+    CheckBox healthCardCheckBox;
+    @InjectView(R.id.checkBox_indira_awas)
+    CheckBox indiraAwasCheckBox;
+    @InjectView(R.id.checkBox_laadali_yogna)
+    CheckBox ladaliCheckBox;
+    @InjectView(R.id.checkBox_manrega)
+    CheckBox manregaCheckBox;
+    @InjectView(R.id.checkBox_oldage_pension)
+    CheckBox oldagePensionCheckBox;
+    @InjectView(R.id.checkBox_rajeev_awas)
+    CheckBox rajeevAwasCheckBox;
+    @InjectView(R.id.checkBox_sawaswati_yojna)
+    CheckBox saraswatiCheckBox;
+    @InjectView(R.id.checkBox_sjsry)
+    CheckBox sjsryCheckBox;
+    @InjectView(R.id.checkBox_tpds)
+    CheckBox tpdsCheckBox;
+    @InjectView(R.id.checkBox_widow_pension)
+    CheckBox widowPensionCheckBox;
+
 
     @InjectView(R.id.spinner_business_type)
     Spinner businessTypeSpinner;
@@ -84,6 +123,7 @@ public class SecondScreenActivity extends BaseActivity {
     ImageView profilePicImageView;
     private String base64ImageString;
 
+    private String optionType, state, city, district, area;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,7 +133,11 @@ public class SecondScreenActivity extends BaseActivity {
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color
                 .theme_main_color)));
         Utils.hideKeyboard(activity);
-
+        optionType = getIntent().getStringExtra(EXTRA_OPTION);
+        state = getIntent().getStringExtra(EXTRA_STATE);
+        city = getIntent().getStringExtra(EXTRA_CITY);
+        district = getIntent().getStringExtra(EXTRA_DISTRICT);
+        area = getIntent().getStringExtra(EXTRA_AREA);
     }
 
 
@@ -104,7 +148,137 @@ public class SecondScreenActivity extends BaseActivity {
 
     @OnClick(R.id.save_button)
     public void onSaveClick() {
-        Utils.showToast(activity, "SAVE CALL PENDING");
+        if (doValidation()) {
+            InformationTable informationTable = new InformationTable(optionType, state, district, city, area);
+            informationTable.setImage_string(base64ImageString);
+            informationTable.setName(nameEditText.getText().toString());
+            informationTable.setFather_name(fatherNameEditText.getText().toString());
+            informationTable.setPermanent_address(permanentAddrEditText.getText().toString());
+            informationTable.setPresent_address(presentAddrEditText.getText().toString());
+            informationTable.setMobile_number(phoneEditText.getText().toString());
+            informationTable.setEmail(emailEditText.getText().toString());
+            informationTable.setAge(ageEditText.getText().toString());
+            informationTable.setGender(genderSpinner.getSelectedItem().toString());
+            informationTable.setIdentity_proof(identityProofSpinner.getSelectedItem().toString());
+            informationTable.setIdentity_proof_details(identityProofDetailsEditText.getText().toString());
+            informationTable.setQualification(qualificationSpinner.getSelectedItem().toString());
+            informationTable.setQualification_details(qualificationDetailsEditText.getText().toString());
+            informationTable.setReligion(religionEditText.getText().toString());
+            informationTable.setCast(casteSpinner.getSelectedItem().toString());
+            informationTable.setMarital_status(maritalStatusSpinner.getSelectedItem().toString());
+            informationTable.setBpl_card(bplCardCheckBox.isChecked());
+            informationTable.setHealth_card(healthCardCheckBox.isChecked());
+            informationTable.setIndira_aawas(indiraAwasCheckBox.isChecked());
+            informationTable.setRajeev_aawas(rajeevAwasCheckBox.isChecked());
+            informationTable.setTpds(tpdsCheckBox.isChecked());
+            informationTable.setSjsry(sjsryCheckBox.isChecked());
+            informationTable.setFood_security(foodSecurityCheckBox.isChecked());
+            informationTable.setWidow_pension(widowPensionCheckBox.isChecked());
+            informationTable.setOldage_pension(oldagePensionCheckBox.isChecked());
+            informationTable.setManrega(manregaCheckBox.isChecked());
+            informationTable.setLadali_yogna(ladaliCheckBox.isChecked());
+            informationTable.setSaraswati_yogna(saraswatiCheckBox.isChecked());
+            informationTable.setBusiness(businessEditText.getText().toString());
+            informationTable.setBusiness_type(businessTypeSpinner.getSelectedItem().toString());
+            informationTable.setAvg_daily_income(avgDailyIncomeEditText.getText().toString());
+            informationTable.save();
+            Timber.e(informationTable.toString());
+            Utils.showThisMsg(activity, "Success:", "Your entry has been saved successfully!",
+                    new DialogInterface.OnClickListener() {
+
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            clearAllFields();
+                        }
+                    }, null);
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.second_screen, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_home) {
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void clearAllFields() {
+        nameEditText.setText("");
+        fatherNameEditText.setText("");
+        permanentAddrEditText.setText("");
+        presentAddrEditText.setText("");
+        phoneEditText.setText("");
+        emailEditText.setText("");
+        ageEditText.setText("");
+        identityProofDetailsEditText.setText("");
+        qualificationDetailsEditText.setText("");
+        religionEditText.setText("");
+        businessEditText.setText("");
+        durationEditText.setText("");
+        avgDailyIncomeEditText.setText("");
+        bplCardCheckBox.setChecked(false);
+        foodSecurityCheckBox.setChecked(false);
+        healthCardCheckBox.setChecked(false);
+        indiraAwasCheckBox.setChecked(false);
+        ladaliCheckBox.setChecked(false);
+        manregaCheckBox.setChecked(false);
+        oldagePensionCheckBox.setChecked(false);
+        rajeevAwasCheckBox.setChecked(false);
+        saraswatiCheckBox.setChecked(false);
+        sjsryCheckBox.setChecked(false);
+        tpdsCheckBox.setChecked(false);
+        widowPensionCheckBox.setChecked(false);
+        businessTypeSpinner.setSelection(0);
+        maritalStatusSpinner.setSelection(0);
+        casteSpinner.setSelection(0);
+        qualificationSpinner.setSelection(0);
+        identityProofSpinner.setSelection(0);
+        genderSpinner.setSelection(0);
+        profilePicImageView.setImageDrawable(getResources().getDrawable(R.drawable.ic_action_add));
+        base64ImageString = null;
+        scroll_view.fullScroll(ScrollView.FOCUS_UP);
+    }
+
+    private boolean doValidation() {
+
+        if (base64ImageString == null || base64ImageString.isEmpty()) {
+            Utils.showToast(activity, "SELECT IMAGE");
+            return false;
+        }
+
+        if (nameEditText.getText().toString().isEmpty()) {
+            Utils.showToast(activity, "Enter Name");
+            return false;
+        }
+
+        if (fatherNameEditText.getText().toString().isEmpty()) {
+            Utils.showToast(activity, "Enter Father/Husbands Name");
+            return false;
+        }
+
+        if (permanentAddrEditText.getText().toString().isEmpty()) {
+            Utils.showToast(activity, "Enter Permanent Address");
+            return false;
+        }
+
+        if (phoneEditText.getText().toString().isEmpty()) {
+            Utils.showToast(activity, "Enter Phone Number");
+            return false;
+        }
+
+        if (ageEditText.getText().toString().isEmpty()) {
+            Utils.showToast(activity, "Enter Age/DOB");
+            return false;
+        }
+        return true;
     }
 
 

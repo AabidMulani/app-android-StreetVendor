@@ -62,8 +62,23 @@ public class FirstScreenActivity extends BaseActivity {
 
     @OnClick(R.id.submit_button)
     public void onSubmitClicked() {
-        Utils.showToast(activity, "Validation Pending");
-        startActivity(new Intent(activity, SecondScreenActivity.class));
+        if (doValidation()) {
+            Intent intent = new Intent(activity, SecondScreenActivity.class);
+            intent.putExtra(SecondScreenActivity.EXTRA_AREA, areaEditText.getText().toString());
+            intent.putExtra(SecondScreenActivity.EXTRA_OPTION, optionSpinner.getSelectedItem().toString());
+            intent.putExtra(SecondScreenActivity.EXTRA_DISTRICT, districtSpinner.getSelectedItem().toString());
+            intent.putExtra(SecondScreenActivity.EXTRA_STATE, stateSpinner.getSelectedItem().toString());
+            intent.putExtra(SecondScreenActivity.EXTRA_CITY, citySpinner.getSelectedItem().toString());
+            startActivity(intent);
+        }
+    }
+
+    private boolean doValidation() {
+        if (areaEditText.getText().toString().isEmpty()) {
+            Utils.showToast(activity, "Enter AREA");
+            return false;
+        }
+        return true;
     }
 
 }

@@ -141,6 +141,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:textSize="@dimen/theme_editext_size"
+                android:singleLine="true"
+                android:inputType="textCapWords"
                 android:textColor="@color/edittext_color"
                 android:textColorHint="@color/light_grey"
                 android:layout_gravity="center_horizontal"/>

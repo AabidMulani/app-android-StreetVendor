@@ -7,4 +7,5 @@
     <color name="theme_main_color">#FFA62F</color>
     <color name="light_grey">#AACECECE</color>
     <color name="edittext_color">#0C0C0C</color>
+    <color name="light_blue">#2B60DE</color>
 </resources>
