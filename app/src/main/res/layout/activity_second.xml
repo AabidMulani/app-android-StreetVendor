@@ -522,110 +522,98 @@
 
             <CheckBox
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/theme_checkbox_size"
                 android:text="BPL Card"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:padding="5dp"
                 android:id="@+id/checkBox_bpl_card"/>
 
             <CheckBox
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/theme_checkbox_size"
                 android:text="Health Card"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:padding="5dp"
                 android:id="@+id/checkBox_health_card"/>
 
             <CheckBox
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/theme_checkbox_size"
                 android:text="Indira Aawas"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:padding="5dp"
                 android:id="@+id/checkBox_indira_awas"/>
 
             <CheckBox
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/theme_checkbox_size"
                 android:text="Rajeev Aawas"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:padding="5dp"
                 android:id="@+id/checkBox_rajeev_awas"/>
 
             <CheckBox
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/theme_checkbox_size"
                 android:text="TPDS"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:padding="5dp"
                 android:id="@+id/checkBox_tpds"/>
 
             <CheckBox
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/theme_checkbox_size"
                 android:text="SJSRY"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:padding="5dp"
                 android:id="@+id/checkBox_sjsry"/>
 
             <CheckBox
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/theme_checkbox_size"
                 android:text="Food Security"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:padding="5dp"
                 android:id="@+id/checkBox_food_security"/>
 
             <CheckBox
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/theme_checkbox_size"
                 android:text="Widow Pension"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:padding="5dp"
                 android:id="@+id/checkBox_widow_pension"/>
 
             <CheckBox
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/theme_checkbox_size"
                 android:text="OldAge Pension"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:padding="5dp"
                 android:id="@+id/checkBox_oldage_pension"/>
 
             <CheckBox
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/theme_checkbox_size"
                 android:text="Manrega"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:padding="5dp"
                 android:id="@+id/checkBox_manrega"/>
 
             <CheckBox
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/theme_checkbox_size"
                 android:text="Laadali Yojna"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:padding="5dp"
                 android:id="@+id/checkBox_laadali_yogna"/>
 
             <CheckBox
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/theme_checkbox_size"
                 android:text="Sarswati Yojna"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:padding="5dp"
                 android:id="@+id/checkBox_sawaswati_yojna"/>
 
 

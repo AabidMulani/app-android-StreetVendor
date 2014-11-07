@@ -6,23 +6,14 @@
         <item>Dist. President</item>
         <item>City President</item>
         <item>Area President</item>
-    </array>
-
-    <array name="gen_secretary_array">
         <item>State General Secretary</item>
         <item>Dist. General Secretary</item>
         <item>City General Secretary</item>
         <item>Area General Secretary</item>
-    </array>
-
-    <array name="treasurer_array">
         <item>State Treasurer</item>
         <item>Dist. Treasurer</item>
         <item>City Treasurer</item>
         <item>Area Treasurer</item>
-    </array>
-
-    <array name="nwcm_array">
         <item>WCM</item>
         <item>TVC MEMBER</item>
         <item>Hawkers</item>
@@ -33,6 +24,17 @@
         <item>Female</item>
     </array>
 
+    <array name="state_array">
+        <item>Jharkand</item>
+    </array>
+
+    <array name="district_array">
+        <item>Rachi</item>
+    </array>
+
+    <array name="city_array">
+        <item>Rachi</item>
+    </array>
 
     <array name="business_type_array">
         <item>Tea Stall</item>

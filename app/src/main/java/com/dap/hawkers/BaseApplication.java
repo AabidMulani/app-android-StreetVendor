@@ -1,7 +1,5 @@
 package com.dap.hawkers;
 
-import com.crashlytics.android.Crashlytics;
-import com.dap.hawkers.utils.CrashlyticsTree;
 import com.orm.SugarApp;
 
 import timber.log.Timber;
@@ -17,9 +15,9 @@ public class BaseApplication extends SugarApp {
         super.onCreate();
         if (BuildConfig.DEBUG) {
             Timber.plant(new Timber.DebugTree());
-        } else {
-            Crashlytics.start(this);
-            Timber.plant(new CrashlyticsTree());
+//        } else {
+//            Crashlytics.start(this);
+//            Timber.plant(new CrashlyticsTree());
         }
 
     }

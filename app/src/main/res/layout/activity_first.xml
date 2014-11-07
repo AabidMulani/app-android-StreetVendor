@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
                 android:textStyle="normal"
-                android:text="President"
+                android:text="SELECT ONE:"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:padding="5dp"
@@ -43,103 +43,11 @@
             <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:id="@+id/spinner_president"
+                android:id="@+id/spinner_option"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:entries="@array/president_array"
                 android:padding="5dp"/>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="@color/divider_line"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textStyle="normal"
-                android:text="General Secretary "
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:padding="5dp"
-                android:textColor="@color/label_color"/>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="@color/divider_line"/>
-
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:id="@+id/spinner_gen_secretary"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:entries="@array/gen_secretary_array"
-                android:padding="5dp"/>
-
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="@color/divider_line"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textStyle="normal"
-                android:text="Treasurer"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:padding="5dp"
-                android:textColor="@color/label_color"/>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="@color/divider_line"/>
-
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:id="@+id/spinner_treasurer"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:entries="@array/treasurer_array"
-                android:padding="5dp"/>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="@color/divider_line"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textStyle="normal"
-                android:text="NWCM"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:padding="5dp"
-                android:textColor="@color/label_color"/>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="@color/divider_line"/>
-
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:id="@+id/spinner_nwcm"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:entries="@array/nwcm_array"
-                android:padding="5dp"/>
-
 
             <View
                 android:layout_width="match_parent"
@@ -157,38 +65,73 @@
                 android:padding="5dp"
                 android:textColor="@color/label_color"/>
 
-
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1px"
                 android:background="@color/divider_line"/>
 
-            <CheckBox
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="State"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:text="State:"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:padding="5dp"
-                android:id="@+id/checkBox_state"/>
+                android:textColor="@color/label_color"/>
 
-            <CheckBox
+            <Spinner
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="District"
+                android:layout_height="65dp"
+                android:id="@+id/spinner_state"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:padding="5dp"
-                android:id="@+id/checkBox_district"/>
+                android:entries="@array/state_array"
+                android:padding="5dp"/>
 
-            <CheckBox
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="City"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:text="District:"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:padding="5dp"
-                android:id="@+id/checkBox_city"/>
+                android:textColor="@color/label_color"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:id="@+id/spinner_district"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:entries="@array/district_array"
+                android:padding="5dp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:text="City:"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+                android:textColor="@color/label_color"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:id="@+id/spinner_city"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:entries="@array/city_array"
+                android:padding="5dp"/>
+
 
             <EditText
                 android:layout_width="match_parent"
@@ -201,6 +144,12 @@
                 android:textColor="@color/edittext_color"
                 android:textColorHint="@color/light_grey"
                 android:layout_gravity="center_horizontal"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="5dp"
+                android:background="@color/divider_line"/>
 
         </LinearLayout>
 

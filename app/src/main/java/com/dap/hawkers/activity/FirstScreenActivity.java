@@ -5,7 +5,6 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 
@@ -20,24 +19,17 @@ import butterknife.OnClick;
 
 public class FirstScreenActivity extends BaseActivity {
 
-    @InjectView(R.id.spinner_gen_secretary)
-    Spinner genSecretarySpinner;
-    @InjectView(R.id.spinner_nwcm)
-    Spinner nwcmSpinner;
-    @InjectView(R.id.spinner_president)
-    Spinner presidentSpinner;
-    @InjectView(R.id.spinner_treasurer)
-    Spinner treasurerSpinner;
+    @InjectView(R.id.spinner_option)
+    Spinner optionSpinner;
+    @InjectView(R.id.spinner_state)
+    Spinner stateSpinner;
+    @InjectView(R.id.spinner_district)
+    Spinner districtSpinner;
+    @InjectView(R.id.spinner_city)
+    Spinner citySpinner;
 
     @InjectView(R.id.editText_area)
     EditText areaEditText;
-
-    @InjectView(R.id.checkBox_city)
-    CheckBox cityCheckBox;
-    @InjectView(R.id.checkBox_district)
-    CheckBox districtCheckBox;
-    @InjectView(R.id.checkBox_state)
-    CheckBox stateCheckBox;
 
 
     @Override
